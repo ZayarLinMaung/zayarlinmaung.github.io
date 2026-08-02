@@ -285,14 +285,15 @@ p {
 
 /* Flank the character inside its own stage */
 .hero-float-1 {
-  top: 16%;
+  top: 50%;
   left: 2%;
   right: auto;
-  animation: float-bit 3s steps(4) infinite;
+  transform: translateY(-50%);
+  animation: float-bit-mid 3s steps(4) infinite;
 }
 
 .hero-float-2 {
-  top: 18%;
+  top: 34%;
   right: 2%;
   left: auto;
   animation: float-bit 3.6s steps(4) infinite reverse;
@@ -1081,6 +1082,16 @@ p {
   }
 }
 
+@keyframes float-bit-mid {
+  0%,
+  100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(calc(-50% - 6px));
+  }
+}
+
 @keyframes grass-sway {
   0%,
   100% {
@@ -1144,13 +1155,14 @@ p {
   }
 
   .hero-float-1 {
-    top: 22%;
+    top: 50%;
     left: 2%;
     right: auto;
+    transform: translateY(-50%);
   }
 
   .hero-float-2 {
-    top: 20%;
+    top: 36%;
     right: 2%;
     left: auto;
   }
@@ -1250,6 +1262,9 @@ p {
     animation: none !important;
     transition: none !important;
     opacity: 1;
-    transform: none;
+  }
+
+  .hero-float-1 {
+    transform: translateY(-50%);
   }
 }
