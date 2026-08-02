@@ -1,3 +1,108 @@
+const C = {
+  dark: '#0f380f',
+  mid: '#306230',
+  light: '#8bac0f',
+  pale: '#9bbc0f',
+}
+
+function P({ x, y, w = 1, h = 1, fill }) {
+  return <rect x={x} y={y} width={w} height={h} fill={fill} />
+}
+
+function PixelKeyboard() {
+  return (
+    <svg viewBox="0 0 32 18" width="64" height="36" shapeRendering="crispEdges" aria-hidden="true">
+      <P x={1} y={3} w={30} h={13} fill={C.dark} />
+      <P x={2} y={4} w={28} h={11} fill={C.mid} />
+      {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+        <P key={`k1-${i}`} x={3 + i * 4} y={5} w={3} h={3} fill={C.pale} />
+      ))}
+      {[0, 1, 2, 3, 4, 5].map((i) => (
+        <P key={`k2-${i}`} x={5 + i * 4} y={9} w={3} h={3} fill={C.light} />
+      ))}
+      <P x={8} y={13} w={14} h={2} fill={C.pale} />
+    </svg>
+  )
+}
+
+function PixelTux() {
+  return (
+    <svg viewBox="0 0 20 24" width="40" height="48" shapeRendering="crispEdges" aria-hidden="true">
+      {/* body */}
+      <P x={5} y={8} w={10} h={11} fill={C.dark} />
+      <P x={6} y={10} w={8} h={8} fill={C.pale} />
+      {/* head */}
+      <P x={5} y={2} w={10} h={8} fill={C.dark} />
+      <P x={7} y={4} w={2} h={2} fill={C.pale} />
+      <P x={11} y={4} w={2} h={2} fill={C.pale} />
+      <P x={8} y={7} w={4} h={2} fill={C.light} />
+      {/* belly highlight */}
+      <P x={8} y={12} w={4} h={4} fill={C.light} />
+      {/* feet */}
+      <P x={5} y={19} w={4} h={2} fill={C.light} />
+      <P x={11} y={19} w={4} h={2} fill={C.light} />
+      {/* flippers */}
+      <P x={2} y={12} w={3} h={4} fill={C.dark} />
+      <P x={15} y={12} w={3} h={4} fill={C.dark} />
+    </svg>
+  )
+}
+
+function PixelArch() {
+  return (
+    <svg viewBox="0 0 24 24" width="48" height="48" shapeRendering="crispEdges" aria-hidden="true">
+      {/* classic Arch-ish pointed A mark in GB greens */}
+      <P x={11} y={2} w={2} h={2} fill={C.pale} />
+      <P x={10} y={4} w={4} h={2} fill={C.pale} />
+      <P x={9} y={6} w={6} h={2} fill={C.light} />
+      <P x={8} y={8} w={8} h={2} fill={C.light} />
+      <P x={7} y={10} w={4} h={2} fill={C.mid} />
+      <P x={13} y={10} w={4} h={2} fill={C.mid} />
+      <P x={6} y={12} w={3} h={2} fill={C.mid} />
+      <P x={15} y={12} w={3} h={2} fill={C.mid} />
+      <P x={5} y={14} w={3} h={2} fill={C.dark} />
+      <P x={16} y={14} w={3} h={2} fill={C.dark} />
+      <P x={4} y={16} w={3} h={2} fill={C.dark} />
+      <P x={17} y={16} w={3} h={2} fill={C.dark} />
+      <P x={3} y={18} w={4} h={2} fill={C.dark} />
+      <P x={17} y={18} w={4} h={2} fill={C.dark} />
+      {/* crossbar */}
+      <P x={8} y={12} w={8} h={2} fill={C.pale} />
+      <P x={9} y={14} w={6} h={1} fill={C.light} />
+    </svg>
+  )
+}
+
+function PixelTerminal() {
+  return (
+    <svg viewBox="0 0 28 20" width="56" height="40" shapeRendering="crispEdges" aria-hidden="true">
+      <P x={1} y={1} w={26} h={18} fill={C.dark} />
+      <P x={2} y={2} w={24} h={3} fill={C.mid} />
+      <P x={3} y={3} w={2} h={1} fill={C.light} />
+      <P x={6} y={3} w={2} h={1} fill={C.pale} />
+      <P x={9} y={3} w={2} h={1} fill={C.light} />
+      <P x={4} y={8} w={2} h={2} fill={C.pale} />
+      <P x={7} y={8} w={10} h={2} fill={C.light} />
+      <P x={4} y={12} w={2} h={2} fill={C.pale} />
+      <P x={7} y={12} w={2} h={2} fill={C.pale} />
+      <P x={10} y={12} w={2} h={2} fill={C.mid} />
+    </svg>
+  )
+}
+
+function PixelGitBranch() {
+  return (
+    <svg viewBox="0 0 20 24" width="40" height="48" shapeRendering="crispEdges" aria-hidden="true">
+      <P x={4} y={2} w={4} h={4} fill={C.pale} />
+      <P x={5} y={6} w={2} h={10} fill={C.mid} />
+      <P x={4} y={16} w={4} h={4} fill={C.light} />
+      <P x={7} y={8} w={6} h={2} fill={C.mid} />
+      <P x={12} y={6} w={2} h={4} fill={C.mid} />
+      <P x={11} y={3} w={4} h={4} fill={C.pale} />
+    </svg>
+  )
+}
+
 /** Decorative pixel scenery for the hero — pure atmosphere. */
 export default function HeroWorld() {
   const light = '#8bac0f'
@@ -31,14 +136,20 @@ export default function HeroWorld() {
         <rect x="4" y="10" width="6" height="4" fill={light} />
       </svg>
 
-      <div className="hero-float hero-float-1">
-        <span>{'>_'}</span>
+      <div className="hero-float hero-float-1" title="Terminal">
+        <PixelTerminal />
       </div>
-      <div className="hero-float hero-float-2">
-        <span>mug</span>
+      <div className="hero-float hero-float-2" title="Arch Linux">
+        <PixelArch />
       </div>
-      <div className="hero-float hero-float-3">
-        <span>[A]</span>
+      <div className="hero-float hero-float-3" title="Tux">
+        <PixelTux />
+      </div>
+      <div className="hero-float hero-float-4" title="Mechanical keyboard">
+        <PixelKeyboard />
+      </div>
+      <div className="hero-float hero-float-5" title="Git">
+        <PixelGitBranch />
       </div>
 
       <div className="hero-grass">

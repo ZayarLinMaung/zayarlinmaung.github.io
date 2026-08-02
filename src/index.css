@@ -255,32 +255,54 @@ p {
 
 .hero-float {
   position: absolute;
-  font-family: var(--font-display);
-  font-size: 0.42rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--gb-1);
   background: var(--gb-4);
   border: 2px solid var(--gb-1);
-  padding: 0.35rem 0.4rem;
+  padding: 0.35rem;
   box-shadow: 2px 2px 0 var(--gb-1);
-  opacity: 0.85;
+  opacity: 0.92;
+  image-rendering: pixelated;
+}
+
+.hero-float svg {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 64px;
+  max-height: 48px;
 }
 
 .hero-float-1 {
-  top: 34%;
-  left: 6%;
+  top: 32%;
+  left: 5%;
   animation: float-bit 3s steps(4) infinite;
 }
 
 .hero-float-2 {
-  top: 42%;
-  right: 8%;
+  top: 38%;
+  right: 7%;
   animation: float-bit 3.6s steps(4) infinite reverse;
 }
 
 .hero-float-3 {
-  bottom: 28%;
-  left: 42%;
+  bottom: 30%;
+  left: 38%;
   animation: float-bit 2.8s steps(4) infinite;
+}
+
+.hero-float-4 {
+  top: 48%;
+  left: 14%;
+  animation: float-bit 3.2s steps(4) infinite reverse;
+}
+
+.hero-float-5 {
+  bottom: 34%;
+  right: 16%;
+  animation: float-bit 2.5s steps(4) infinite;
 }
 
 .hero-grass {
@@ -1029,6 +1051,7 @@ p {
 
   .hero-cloud-b,
   .hero-float-3,
+  .hero-float-5,
   .hero-path {
     display: none;
   }
