@@ -5,10 +5,11 @@ export default function Studio() {
   return (
     <section id="studio" className="section studio">
       <div className="section-head">
-        <p className="eyebrow">04 · SIDE QUESTS</p>
-        <h2>Studio & practice</h2>
+        <p className="eyebrow">04 · For the fun of it</p>
+        <h2>Side projects & hobbies</h2>
         <p className="section-lead">
-          Hardware craft, Arch Linux workflows, and game systems built after hours.
+          Keyboards, Arch tinkering, and game prototypes—the stuff I happily stay
+          up late for.
         </p>
       </div>
       <div className="studio-grid">

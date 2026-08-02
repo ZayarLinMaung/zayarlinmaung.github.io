@@ -1,9 +1,9 @@
 export const navLinks = [
-  { href: '#expertise', label: 'Expertise' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#education', label: 'Education' },
-  { href: '#studio', label: 'Studio' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#expertise', label: 'Skills' },
+  { href: '#experience', label: 'Journey' },
+  { href: '#education', label: 'Learning' },
+  { href: '#studio', label: 'After Hours' },
+  { href: '#contact', label: 'Say Hi' },
 ]
 
 export const skills = [
@@ -23,8 +23,8 @@ export const roles = [
     period: 'Jan 2025 — Present',
     title: 'Freelance Software Developer',
     paragraphs: [
-      'Architected and deployed responsive web and cross-platform apps with Go, PostgreSQL, Node.js, MongoDB, React, and Tailwind CSS. Built RESTful APIs, scalable schemas, and performance-focused UIs.',
-      'Developed an interactive terminal UI for multi-server SSH profile and credential management. Shipped automated real-time object-tracking and pose-detection pipelines with Python, OpenCV, and YOLOv8 on local hardware acceleration.',
+      'I help ideas become real products—building responsive web and cross-platform apps with Go, PostgreSQL, Node.js, MongoDB, React, and Tailwind. From clean APIs to snappy UIs, I care about work that feels good to use and easy to maintain.',
+      'Along the way I shipped a terminal UI that tames multi-server SSH profiles, plus real-time object-tracking and pose-detection pipelines with Python, OpenCV, and YOLOv8—running happily on local hardware acceleration.',
     ],
   },
   {
@@ -32,7 +32,7 @@ export const roles = [
     period: 'Oct 2025 — Present',
     title: 'Indie Game Developer',
     paragraphs: [
-      'Integrated Nakama Engine with PostgreSQL for real-time session management, matchmaking, and authoritative state sync on an RTS/MOBA prototype. Designed a low-overhead gameplay loop in Godot 4 (GDScript), pairing 2D physics and navigation with 3D puppet presentation for smooth multiplayer performance.',
+      'Currently cooking an RTS/MOBA prototype: Nakama + PostgreSQL for sessions, matchmaking, and fair authoritative sync, with a lean Godot 4 (GDScript) loop that mixes 2D physics/navigation and 3D puppets so multiplayer stays smooth without melting the CPU.',
     ],
   },
   {
@@ -40,7 +40,7 @@ export const roles = [
     period: 'Feb 2023 — May 2024',
     title: 'Trainer at Genesis Programming, Yangon',
     paragraphs: [
-      'Founded Genesis Programming and designed a practical curriculum for junior developers and university students. Delivered workshops and mentoring that guided 70+ learners through real-world projects, course planning, and career-readiness coaching toward internships and junior roles.',
+      'I started Genesis Programming to make computer science feel approachable. Through workshops and one-on-one mentoring, I helped 70+ students finish real projects and get ready for internships and junior roles—curriculum, materials, and career chats included.',
     ],
   },
 ]
@@ -51,21 +51,21 @@ export const education = [
     period: 'Nov 2024 — Present',
     title: 'BSc Software Engineering',
     org: 'Asia Pacific University, Kuala Lumpur',
-    body: 'Ongoing degree with coursework in data structures, software architecture, databases, and distributed systems. Leading a cloud-native team project with Go, PostgreSQL, and React—focused on scalable architecture, CI/CD, and automated testing.',
+    body: 'Still leveling up in software engineering—data structures, architecture, databases, distributed systems, and friends. Right now I’m leading a team cloud-native app with Go, PostgreSQL, and React, with CI/CD and tests baked in from day one.',
   },
   {
     dateTime: '2024-01',
     period: 'Jan 2024 — Jun 2024',
     title: 'Master of Business Administration',
     org: 'Swiss School of Business Research, Zürich (Distant) · Honors',
-    body: 'Case-driven study in process optimization, cross-functional collaboration, and data-driven decisions—skills that map directly to DevOps coordination and platform delivery.',
+    body: 'Graduated with Honors after diving into process optimization, teamwork across disciplines, and decisions backed by data. It’s the people-and-priorities side of shipping platforms—and it pairs surprisingly well with DevOps.',
   },
   {
     dateTime: '2019-01',
     period: 'Jan 2019 — Feb 2022',
     title: 'HND Network Engineering',
     org: 'Pearson University, London (Distant) · Merit',
-    body: 'Hands-on labs covering protocols, routing & switching, LAN/WAN design, security, and troubleshooting. Capstone: a scalable campus network topology designed for reliability and performance.',
+    body: 'Graduated with Merit after lots of hands-on labs: protocols, routing & switching, LAN/WAN design, security, and troubleshooting. Capstone was a campus network designed to stay reliable when things get busy.',
   },
 ]
 
@@ -73,28 +73,28 @@ export const studio = [
   {
     tag: 'Hardware',
     title: 'Custom Mechanical Keyboards',
-    body: 'End-to-end builds: ergonomic layouts, switch selection, hand-wired PCBs, QMK/VIA firmware, and 3D-modeled cases—iterated for reliability and typing feel.',
+    body: 'I build keyboards the long way—layouts, switches, hand-wired PCBs, QMK/VIA firmware, and 3D-printed cases—then keep tweaking until typing feels just right.',
     dateTime: '2021-02',
     period: 'Feb 2021 — Present',
   },
   {
     tag: 'Systems',
     title: 'Linux Workstation Optimization',
-    body: 'Minimal, keyboard-driven Arch Linux with tiling compositors, custom shell scripts, and automated dotfiles, backups, and workflow controls.',
+    body: 'My daily driver is a minimal, keyboard-first Arch Linux setup with tiling compositors, custom scripts, and automated dotfiles—less clicking, more flow.',
     dateTime: '2020-03',
     period: 'Mar 2020 — Present',
   },
   {
     tag: 'Games',
     title: 'Godot 4 Development',
-    body: 'Custom 2D navigation and physics with 3D presentation layers; networked prototypes tuned for smooth multiplayer and single-player performance.',
+    body: 'After hours you’ll find me in Godot 4, prototyping navigation, physics, and networked bits—always hunting for that smooth-feel frame time.',
     dateTime: '2025-10',
     period: 'Oct 2025 — Present',
   },
   {
     tag: 'Art',
     title: '3D Art & Asset Pipeline',
-    body: 'Low-poly modeling, texturing, and lighting in Blender; stylized cel-shading shaders and mesh/texture optimization for draw-call efficiency.',
+    body: 'I model and texture low-poly assets in Blender, play with cel-shading, and trim meshes so games stay light on draw calls and memory.',
     period: 'Ongoing',
   },
 ]

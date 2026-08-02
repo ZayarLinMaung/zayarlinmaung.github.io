@@ -5,10 +5,11 @@ export default function Education() {
   return (
     <section id="education" className="section education">
       <div className="section-head">
-        <p className="eyebrow">03 · SAVE POINTS</p>
-        <h2>Education</h2>
+        <p className="eyebrow">03 · Always learning</p>
+        <h2>Where I leveled up</h2>
         <p className="section-lead">
-          Software engineering, networks, and business strategy in parallel.
+          Software, networks, and a bit of business strategy—because good systems
+          need both code and context.
         </p>
       </div>
       <div className="edu-list">

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <p>© {year} Zayar Lin Maung</p>
-      <a href="#top">▲ CONTINUE?</a>
+      <a href="#top">Back to top ↑</a>
     </footer>
   )
 }

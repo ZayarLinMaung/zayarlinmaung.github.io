@@ -5,10 +5,11 @@ export default function Experience() {
   return (
     <section id="experience" className="section experience">
       <div className="section-head">
-        <p className="eyebrow">02 · QUEST LOG</p>
-        <h2>Professional experience</h2>
+        <p className="eyebrow">02 · Along the way</p>
+        <h2>Things I’ve been building</h2>
         <p className="section-lead">
-          Mentorship, freelance delivery, and indie multiplayer systems.
+          Teaching, freelancing, and shipping multiplayer experiments—always with
+          curiosity as the main fuel.
         </p>
       </div>
       <div className="timeline">

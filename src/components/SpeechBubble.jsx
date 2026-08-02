@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const MESSAGE = 'I use Arch btw.'
+const MESSAGE = 'I use Arch btw :)'
 
 export default function SpeechBubble({ text = MESSAGE }) {
   const [shown, setShown] = useState('')

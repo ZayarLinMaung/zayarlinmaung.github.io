@@ -5,9 +5,11 @@ export default function Contact() {
   return (
     <section id="contact" className="section contact">
       <div className="section-head">
-        <p className="eyebrow">05 · MULTIPLAYER</p>
-        <h2>Let’s build something solid</h2>
-        <p className="section-lead">Open to DevOps, platform, and full-stack collaborations.</p>
+        <p className="eyebrow">05 · Your move</p>
+        <h2>Let’s make something cool</h2>
+        <p className="section-lead">
+          Got a DevOps, platform, or full-stack idea? I’d love to hear about it.
+        </p>
       </div>
       <Reveal className="contact-panel">
         <a className="contact-link" href={`mailto:${contact.email}`}>

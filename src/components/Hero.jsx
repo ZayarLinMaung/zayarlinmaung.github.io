@@ -6,18 +6,18 @@ export default function Hero() {
     <section id="top" className="hero" aria-labelledby="brand">
       <div className="hero-left">
         <div className="hero-copy">
-          <p className="eyebrow">▼ PLAYER 1 · MY</p>
+          <p className="eyebrow">Hey there · DevOps · Malaysia</p>
           <h1 id="brand">Zayar Lin Maung</h1>
           <p className="lede">
-            Turning complex systems into reliable, high-performance platforms— Go backends,
-            Linux automation, and production-ready CI/CD.
+            I turn messy systems into calm, reliable platforms—Go backends, Linux
+            automation, and CI/CD you can trust in production.
           </p>
           <div className="cta-row">
             <a className="btn btn-primary" href="#contact">
-              ▶ A - Start
+              ▶ Let’s talk
             </a>
             <a className="btn btn-ghost" href="#experience">
-              B - Select
+              See my work
             </a>
           </div>
         </div>
