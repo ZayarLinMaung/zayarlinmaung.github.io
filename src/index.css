@@ -291,24 +291,9 @@ p {
   animation: float-bit 3.6s steps(4) infinite reverse;
 }
 
-.hero-float-3 {
-  top: 52%;
-  right: 28%;
-  left: auto;
-  bottom: auto;
-  animation: float-bit 2.8s steps(4) infinite;
-}
-
-.hero-float-4 {
-  top: 68%;
-  right: 8%;
-  left: auto;
-  animation: float-bit 3.2s steps(4) infinite reverse;
-}
-
 .hero-float-5 {
-  top: 24%;
-  right: 40%;
+  top: 58%;
+  right: 18%;
   left: auto;
   bottom: auto;
   animation: float-bit 2.5s steps(4) infinite;
@@ -1050,7 +1035,6 @@ p {
     display: none;
   }
 
-  .hero-float-3,
   .hero-float-5 {
     display: none;
   }
@@ -1063,11 +1047,6 @@ p {
   .hero-float-2 {
     right: 4%;
     top: 42%;
-  }
-
-  .hero-float-4 {
-    right: 8%;
-    top: 62%;
   }
 
   .hero-stamp {

@@ -9,45 +9,6 @@ function P({ x, y, w = 1, h = 1, fill }) {
   return <rect x={x} y={y} width={w} height={h} fill={fill} />
 }
 
-function PixelKeyboard() {
-  return (
-    <svg viewBox="0 0 32 18" width="64" height="36" shapeRendering="crispEdges" aria-hidden="true">
-      <P x={1} y={3} w={30} h={13} fill={C.dark} />
-      <P x={2} y={4} w={28} h={11} fill={C.mid} />
-      {[0, 1, 2, 3, 4, 5, 6].map((i) => (
-        <P key={`k1-${i}`} x={3 + i * 4} y={5} w={3} h={3} fill={C.pale} />
-      ))}
-      {[0, 1, 2, 3, 4, 5].map((i) => (
-        <P key={`k2-${i}`} x={5 + i * 4} y={9} w={3} h={3} fill={C.light} />
-      ))}
-      <P x={8} y={13} w={14} h={2} fill={C.pale} />
-    </svg>
-  )
-}
-
-function PixelTux() {
-  return (
-    <svg viewBox="0 0 20 24" width="40" height="48" shapeRendering="crispEdges" aria-hidden="true">
-      {/* body */}
-      <P x={5} y={8} w={10} h={11} fill={C.dark} />
-      <P x={6} y={10} w={8} h={8} fill={C.pale} />
-      {/* head */}
-      <P x={5} y={2} w={10} h={8} fill={C.dark} />
-      <P x={7} y={4} w={2} h={2} fill={C.pale} />
-      <P x={11} y={4} w={2} h={2} fill={C.pale} />
-      <P x={8} y={7} w={4} h={2} fill={C.light} />
-      {/* belly highlight */}
-      <P x={8} y={12} w={4} h={4} fill={C.light} />
-      {/* feet */}
-      <P x={5} y={19} w={4} h={2} fill={C.light} />
-      <P x={11} y={19} w={4} h={2} fill={C.light} />
-      {/* flippers */}
-      <P x={2} y={12} w={3} h={4} fill={C.dark} />
-      <P x={15} y={12} w={3} h={4} fill={C.dark} />
-    </svg>
-  )
-}
-
 function PixelArch() {
   /* Higher-res Game Boy Arch mark — pointed crown, open A, flared legs */
   return (
@@ -160,12 +121,6 @@ export default function HeroWorld() {
       </div>
       <div className="hero-float hero-float-2" title="Arch Linux">
         <PixelArch />
-      </div>
-      <div className="hero-float hero-float-3" title="Tux">
-        <PixelTux />
-      </div>
-      <div className="hero-float hero-float-4" title="Mechanical keyboard">
-        <PixelKeyboard />
       </div>
       <div className="hero-float hero-float-5" title="Git">
         <PixelGitBranch />
