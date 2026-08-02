@@ -300,10 +300,10 @@ p {
 }
 
 .hero-float-5 {
-  bottom: 10%;
+  top: 8%;
   left: 6%;
   right: auto;
-  top: auto;
+  bottom: auto;
   animation: float-bit 2.5s steps(4) infinite;
 }
 
