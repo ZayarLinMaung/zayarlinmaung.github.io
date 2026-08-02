@@ -6,7 +6,7 @@ export default function Hero() {
     <section id="top" className="hero" aria-labelledby="brand">
       <div className="hero-left">
         <div className="hero-copy">
-          <p className="eyebrow">▼ GAME BOY · PLAYER 1 · MY</p>
+          <p className="eyebrow">▼ PLAYER 1 · MY</p>
           <h1 id="brand">Zayar Lin Maung</h1>
           <p className="lede">
             Turning complex systems into reliable, high-performance platforms— Go backends,
