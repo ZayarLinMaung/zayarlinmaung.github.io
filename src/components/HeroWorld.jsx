@@ -49,26 +49,45 @@ function PixelTux() {
 }
 
 function PixelArch() {
+  /* Higher-res Game Boy Arch mark — pointed crown, open A, flared legs */
   return (
-    <svg viewBox="0 0 24 24" width="48" height="48" shapeRendering="crispEdges" aria-hidden="true">
-      {/* classic Arch-ish pointed A mark in GB greens */}
-      <P x={11} y={2} w={2} h={2} fill={C.pale} />
-      <P x={10} y={4} w={4} h={2} fill={C.pale} />
-      <P x={9} y={6} w={6} h={2} fill={C.light} />
-      <P x={8} y={8} w={8} h={2} fill={C.light} />
-      <P x={7} y={10} w={4} h={2} fill={C.mid} />
-      <P x={13} y={10} w={4} h={2} fill={C.mid} />
-      <P x={6} y={12} w={3} h={2} fill={C.mid} />
-      <P x={15} y={12} w={3} h={2} fill={C.mid} />
-      <P x={5} y={14} w={3} h={2} fill={C.dark} />
-      <P x={16} y={14} w={3} h={2} fill={C.dark} />
-      <P x={4} y={16} w={3} h={2} fill={C.dark} />
-      <P x={17} y={16} w={3} h={2} fill={C.dark} />
-      <P x={3} y={18} w={4} h={2} fill={C.dark} />
-      <P x={17} y={18} w={4} h={2} fill={C.dark} />
-      {/* crossbar */}
-      <P x={8} y={12} w={8} h={2} fill={C.pale} />
-      <P x={9} y={14} w={6} h={1} fill={C.light} />
+    <svg viewBox="0 0 32 32" width="56" height="56" shapeRendering="crispEdges" aria-hidden="true">
+      {/* tip */}
+      <P x={15} y={1} w={2} h={2} fill={C.pale} />
+      <P x={14} y={3} w={4} h={2} fill={C.pale} />
+      <P x={13} y={5} w={6} h={2} fill={C.pale} />
+      {/* upper slopes */}
+      <P x={12} y={7} w={3} h={2} fill={C.light} />
+      <P x={17} y={7} w={3} h={2} fill={C.light} />
+      <P x={11} y={9} w={3} h={2} fill={C.light} />
+      <P x={18} y={9} w={3} h={2} fill={C.light} />
+      <P x={10} y={11} w={3} h={2} fill={C.mid} />
+      <P x={19} y={11} w={3} h={2} fill={C.mid} />
+      {/* mid ring / crossbar area */}
+      <P x={9} y={13} w={3} h={2} fill={C.mid} />
+      <P x={20} y={13} w={3} h={2} fill={C.mid} />
+      <P x={12} y={13} w={8} h={2} fill={C.pale} />
+      <P x={11} y={15} w={10} h={1} fill={C.light} />
+      {/* lower outer legs */}
+      <P x={8} y={15} w={3} h={2} fill={C.mid} />
+      <P x={21} y={15} w={3} h={2} fill={C.mid} />
+      <P x={7} y={17} w={3} h={2} fill={C.dark} />
+      <P x={22} y={17} w={3} h={2} fill={C.dark} />
+      <P x={6} y={19} w={3} h={2} fill={C.dark} />
+      <P x={23} y={19} w={3} h={2} fill={C.dark} />
+      <P x={5} y={21} w={4} h={2} fill={C.dark} />
+      <P x={23} y={21} w={4} h={2} fill={C.dark} />
+      <P x={4} y={23} w={4} h={2} fill={C.dark} />
+      <P x={24} y={23} w={4} h={2} fill={C.dark} />
+      {/* foot flares */}
+      <P x={3} y={25} w={5} h={2} fill={C.mid} />
+      <P x={24} y={25} w={5} h={2} fill={C.mid} />
+      <P x={2} y={27} w={6} h={2} fill={C.light} />
+      <P x={24} y={27} w={6} h={2} fill={C.light} />
+      {/* inner hollow suggestion */}
+      <P x={14} y={9} w={4} h={3} fill={C.pale} />
+      <P x={13} y={17} w={2} h={2} fill={C.mid} />
+      <P x={17} y={17} w={2} h={2} fill={C.mid} />
     </svg>
   )
 }
@@ -161,8 +180,6 @@ export default function HeroWorld() {
           />
         ))}
       </div>
-
-      <div className="hero-path" />
 
       <div className="hero-stamp">
         <span className="stamp-led" />

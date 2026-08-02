@@ -37,7 +37,7 @@ export default function Hero() {
 
       <div className="hero-character">
         <SpeechBubble />
-        <div className="hero-nameplate">ZLM · LV.devops</div>
+        <div className="hero-nameplate">ZLM · LV.24</div>
         <PixelCharacter />
       </div>
     </section>

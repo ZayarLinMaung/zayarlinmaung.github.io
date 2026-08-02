@@ -263,8 +263,9 @@ p {
   border: 2px solid var(--gb-1);
   padding: 0.35rem;
   box-shadow: 2px 2px 0 var(--gb-1);
-  opacity: 0.92;
+  opacity: 0.95;
   image-rendering: pixelated;
+  z-index: 2;
 }
 
 .hero-float svg {
@@ -272,36 +273,44 @@ p {
   width: auto;
   height: auto;
   max-width: 64px;
-  max-height: 48px;
+  max-height: 52px;
 }
 
+/* Keep floats on the character (right) half so they never sit under about.txt */
 .hero-float-1 {
-  top: 32%;
-  left: 5%;
+  top: 18%;
+  right: 22%;
+  left: auto;
   animation: float-bit 3s steps(4) infinite;
 }
 
 .hero-float-2 {
-  top: 38%;
-  right: 7%;
+  top: 36%;
+  right: 4%;
+  left: auto;
   animation: float-bit 3.6s steps(4) infinite reverse;
 }
 
 .hero-float-3 {
-  bottom: 30%;
-  left: 38%;
+  top: 52%;
+  right: 28%;
+  left: auto;
+  bottom: auto;
   animation: float-bit 2.8s steps(4) infinite;
 }
 
 .hero-float-4 {
-  top: 48%;
-  left: 14%;
+  top: 68%;
+  right: 8%;
+  left: auto;
   animation: float-bit 3.2s steps(4) infinite reverse;
 }
 
 .hero-float-5 {
-  bottom: 34%;
-  right: 16%;
+  top: 24%;
+  right: 40%;
+  left: auto;
+  bottom: auto;
   animation: float-bit 2.5s steps(4) infinite;
 }
 
@@ -325,19 +334,7 @@ p {
 }
 
 .hero-path {
-  position: absolute;
-  right: 12%;
-  bottom: 14%;
-  width: min(28vw, 180px);
-  height: 10px;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      var(--gb-3) 0 8px,
-      var(--gb-2) 8px 16px
-    );
-  border: 2px solid var(--gb-1);
-  opacity: 0.55;
+  display: none;
 }
 
 .hero-stamp {
@@ -1049,11 +1046,28 @@ p {
     width: 40px;
   }
 
-  .hero-cloud-b,
-  .hero-float-3,
-  .hero-float-5,
-  .hero-path {
+  .hero-cloud-b {
     display: none;
+  }
+
+  .hero-float-3,
+  .hero-float-5 {
+    display: none;
+  }
+
+  .hero-float-1 {
+    right: 6%;
+    top: 14%;
+  }
+
+  .hero-float-2 {
+    right: 4%;
+    top: 42%;
+  }
+
+  .hero-float-4 {
+    right: 8%;
+    top: 62%;
   }
 
   .hero-stamp {
