@@ -265,7 +265,7 @@ p {
   box-shadow: 2px 2px 0 var(--gb-1);
   opacity: 0.95;
   image-rendering: pixelated;
-  z-index: 2;
+  z-index: 0;
 }
 
 .hero-float svg {
@@ -276,26 +276,33 @@ p {
   max-height: 52px;
 }
 
-/* Keep floats on the character (right) half so they never sit under about.txt */
+.hero-floats {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Flank the character inside its own stage */
 .hero-float-1 {
-  top: 18%;
-  right: 22%;
-  left: auto;
+  top: 16%;
+  left: 2%;
+  right: auto;
   animation: float-bit 3s steps(4) infinite;
 }
 
 .hero-float-2 {
-  top: 36%;
-  right: 4%;
+  top: 18%;
+  right: 2%;
   left: auto;
   animation: float-bit 3.6s steps(4) infinite reverse;
 }
 
 .hero-float-5 {
-  top: 58%;
-  right: 18%;
-  left: auto;
-  bottom: auto;
+  bottom: 10%;
+  left: 6%;
+  right: auto;
+  top: auto;
   animation: float-bit 2.5s steps(4) infinite;
 }
 
@@ -428,6 +435,14 @@ p {
   min-width: 0;
   padding: 5rem var(--space) 2rem;
   animation: pixel-in 0.5s var(--ease-steps) 0.25s both;
+  overflow: visible;
+}
+
+.hero-character > .speech-bubble,
+.hero-character > .pixel-character,
+.hero-character > .hero-nameplate {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-nameplate {
@@ -1104,8 +1119,8 @@ p {
 
   .hero-character {
     order: 0;
-    min-height: 280px;
-    padding: 4.5rem var(--space) 1rem;
+    min-height: min(52vh, 420px);
+    padding: 4.25rem var(--space) 0.75rem;
   }
 
   .hero-sun {
@@ -1118,18 +1133,34 @@ p {
     display: none;
   }
 
-  .hero-float-5 {
-    display: none;
+  /* Compact icons flanking the character — never under about.txt */
+  .hero-float svg {
+    max-width: 44px;
+    max-height: 40px;
+  }
+
+  .hero-float {
+    padding: 0.25rem;
   }
 
   .hero-float-1 {
-    right: 6%;
-    top: 14%;
+    top: 22%;
+    left: 2%;
+    right: auto;
   }
 
   .hero-float-2 {
+    top: 20%;
+    right: 2%;
+    left: auto;
+  }
+
+  .hero-float-5 {
+    display: flex;
+    top: auto;
+    bottom: 8%;
     right: 4%;
-    top: 42%;
+    left: auto;
   }
 
   .hero-stamp {

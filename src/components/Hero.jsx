@@ -1,6 +1,7 @@
 import PixelCharacter from './PixelCharacter'
 import SpeechBubble from './SpeechBubble'
 import HeroWorld from './HeroWorld'
+import HeroFloats from './HeroFloats'
 
 export default function Hero() {
   return (
@@ -36,6 +37,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-character">
+        <HeroFloats />
         <SpeechBubble />
         <div className="hero-nameplate">ZLM · LV.24</div>
         <PixelCharacter />
