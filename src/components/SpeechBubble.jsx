@@ -5,6 +5,18 @@ const LINES = [
   'pip install caffeine',
   'git commit -m "ship"',
   'sudo make coffee',
+  'docker compose up -d',
+  'pacman -Syu && chill',
+  'kubectl get pods --me',
+  'npm run build:vibes',
+  'ssh into the weekend',
+  'CI green = happy',
+  'rtfm then ask nicely',
+  'hyprland > mouse',
+  'godot go brrr',
+  'yay -S motivation',
+  'no place like ~/',
+  'make test && dance',
 ]
 
 export default function SpeechBubble({ lines = LINES }) {
