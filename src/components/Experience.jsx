@@ -1,5 +1,6 @@
 import { roles } from '../data'
 import Reveal from './Reveal'
+import RoleIcon from './RoleIcon'
 
 export default function Experience() {
   return (
@@ -15,15 +16,16 @@ export default function Experience() {
       <div className="timeline">
         {roles.map((role) => (
           <Reveal as="article" className="role" key={role.title}>
-            <div className="role-meta">
+            <div className="role-copy">
               <time dateTime={role.dateTime}>{role.period}</time>
               <h3>{role.title}</h3>
+              <div className="role-body">
+                {role.paragraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                ))}
+              </div>
             </div>
-            <div className="role-body">
-              {role.paragraphs.map((paragraph) => (
-                <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-              ))}
-            </div>
+            <RoleIcon type={role.icon} />
           </Reveal>
         ))}
       </div>

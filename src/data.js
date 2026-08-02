@@ -22,6 +22,7 @@ export const roles = [
     dateTime: '2025-01',
     period: 'Jan 2025 — Present',
     title: 'Freelance Software Developer',
+    icon: 'freelance',
     paragraphs: [
       'I help ideas become real products—building responsive web and cross-platform apps with Go, PostgreSQL, Node.js, MongoDB, React, and Tailwind. From clean APIs to snappy UIs, I care about work that feels good to use and easy to maintain.',
       'Along the way I shipped a terminal UI that tames multi-server SSH profiles, plus real-time object-tracking and pose-detection pipelines with Python, OpenCV, and YOLOv8—running happily on local hardware acceleration.',
@@ -31,6 +32,7 @@ export const roles = [
     dateTime: '2025-10',
     period: 'Oct 2025 — Present',
     title: 'Indie Game Developer',
+    icon: 'game',
     paragraphs: [
       'Currently cooking an RTS/MOBA prototype: Nakama + PostgreSQL for sessions, matchmaking, and fair authoritative sync, with a lean Godot 4 (GDScript) loop that mixes 2D physics/navigation and 3D puppets so multiplayer stays smooth without melting the CPU.',
     ],
@@ -39,6 +41,7 @@ export const roles = [
     dateTime: '2023-02',
     period: 'Feb 2023 — May 2024',
     title: 'Trainer at Genesis Programming, Yangon',
+    icon: 'teach',
     paragraphs: [
       'I started Genesis Programming to make computer science feel approachable. Through workshops and one-on-one mentoring, I helped 70+ students finish real projects and get ready for internships and junior roles—curriculum, materials, and career chats included.',
     ],

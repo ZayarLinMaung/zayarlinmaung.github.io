@@ -662,12 +662,36 @@ p {
 
 .role {
   display: grid;
-  grid-template-columns: minmax(11rem, 0.35fr) 1fr;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 1rem 1.5rem;
+  align-items: center;
   padding: 1.25rem;
   background: var(--gb-4);
   border: 4px solid var(--gb-1);
   box-shadow: 4px 4px 0 var(--gb-1);
+}
+
+.role-copy {
+  min-width: 0;
+}
+
+.role-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 112px;
+  height: 112px;
+  flex-shrink: 0;
+  background: var(--gb-3);
+  border: 3px solid var(--gb-1);
+  box-shadow: inset 0 0 0 3px var(--gb-4);
+  image-rendering: pixelated;
+}
+
+.role-icon svg {
+  display: block;
+  width: 72px;
+  height: 72px;
 }
 
 .edu-list {
@@ -724,6 +748,7 @@ p {
   font-size: clamp(0.55rem, 1.5vw, 0.72rem);
   line-height: 1.5;
   color: var(--gb-1);
+  margin: 0 0 0.75rem;
 }
 
 .edu h3 {
@@ -763,6 +788,21 @@ p {
   }
 
   .edu-icon svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .role {
+    grid-template-columns: 1fr;
+  }
+
+  .role-icon {
+    width: 100%;
+    height: 88px;
+    order: -1;
+  }
+
+  .role-icon svg {
     width: 56px;
     height: 56px;
   }
@@ -1107,10 +1147,6 @@ p {
   .pixel-character {
     width: min(46vw, 150px);
     max-height: 220px;
-  }
-
-  .role {
-    grid-template-columns: 1fr;
   }
 
   .studio-grid {
