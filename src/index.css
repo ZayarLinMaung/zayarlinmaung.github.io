@@ -412,16 +412,25 @@ p {
 .skill-rail {
   list-style: none;
   margin: 0;
-  padding: 1.25rem 0;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.65rem;
   border-top: 4px solid var(--gb-1);
   border-bottom: 4px solid var(--gb-1);
   background: var(--gb-3);
 }
 
+@media (min-width: 900px) {
+  .skill-rail {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .skill-rail li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
   font-family: var(--font-display);
   font-size: clamp(0.45rem, 1.4vw, 0.62rem);
   line-height: 1.5;
@@ -430,11 +439,20 @@ p {
   border: 3px solid var(--gb-1);
   box-shadow: 3px 3px 0 var(--gb-1);
   padding: 0.65rem 0.7rem;
+  min-width: 0;
 }
 
 .skill-rail li::before {
-  content: "■ ";
+  content: "■";
+  flex: 0 0 auto;
   color: var(--gb-2);
+  line-height: 1.5;
+}
+
+@media (max-width: 520px) {
+  .skill-rail {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Experience / Education cards */
