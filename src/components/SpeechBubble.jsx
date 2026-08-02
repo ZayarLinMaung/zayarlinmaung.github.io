@@ -1,10 +1,17 @@
 import { useEffect, useState } from 'react'
 
-const MESSAGE = 'I use Arch btw :)'
+const LINES = [
+  'I use Arch btw :)',
+  'pip install caffeine',
+  'git commit -m "ship"',
+  'sudo make coffee',
+]
 
-export default function SpeechBubble({ text = MESSAGE }) {
+export default function SpeechBubble({ lines = LINES }) {
+  const [lineIndex, setLineIndex] = useState(0)
   const [shown, setShown] = useState('')
   const [done, setDone] = useState(false)
+  const text = lines[lineIndex % lines.length]
 
   useEffect(() => {
     let index = 0
@@ -16,7 +23,7 @@ export default function SpeechBubble({ text = MESSAGE }) {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const charMs = reduced ? 45 : 160
     const pauseMs = reduced ? 2000 : 3200
-    const beginMs = reduced ? 250 : 600
+    const beginMs = reduced ? 200 : 400
 
     const typeNext = () => {
       if (cancelled) return
@@ -26,20 +33,16 @@ export default function SpeechBubble({ text = MESSAGE }) {
         setDone(true)
         loopTimer = window.setTimeout(() => {
           if (cancelled) return
-          index = 0
-          setShown('')
-          setDone(false)
-          typeTimer = window.setInterval(typeNext, charMs)
+          setLineIndex((n) => (n + 1) % lines.length)
         }, pauseMs)
         window.clearInterval(typeTimer)
-        return
       }
     }
 
+    setShown('')
+    setDone(false)
     startTimer = window.setTimeout(() => {
       if (cancelled) return
-      setShown('')
-      setDone(false)
       index = 0
       typeTimer = window.setInterval(typeNext, charMs)
     }, beginMs)
@@ -50,7 +53,7 @@ export default function SpeechBubble({ text = MESSAGE }) {
       window.clearTimeout(loopTimer)
       window.clearInterval(typeTimer)
     }
-  }, [text])
+  }, [text, lines.length])
 
   return (
     <div className="speech-bubble" role="note" aria-label={text}>

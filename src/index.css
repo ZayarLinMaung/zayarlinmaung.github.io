@@ -207,15 +207,142 @@ p {
     linear-gradient(
       180deg,
       var(--gb-4) 0%,
-      var(--gb-4) 62%,
-      var(--gb-3) 62%,
-      var(--gb-3) 82%,
-      var(--gb-2) 82%
+      var(--gb-4) 58%,
+      var(--gb-3) 58%,
+      var(--gb-3) 78%,
+      var(--gb-2) 78%
     );
   border-bottom: 4px solid var(--gb-1);
 }
 
+.hero-world {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-sun {
+  position: absolute;
+  top: 12%;
+  right: 18%;
+  width: 56px;
+  height: 56px;
+  image-rendering: pixelated;
+  animation: sun-pulse 2.4s steps(2) infinite;
+}
+
+.hero-cloud {
+  position: absolute;
+  image-rendering: pixelated;
+  opacity: 0.95;
+}
+
+.hero-cloud-a {
+  top: 16%;
+  left: 8%;
+  width: 96px;
+  animation: cloud-drift 18s steps(24) infinite;
+}
+
+.hero-cloud-b {
+  top: 22%;
+  left: 28%;
+  width: 72px;
+  animation: cloud-drift 22s steps(24) infinite reverse;
+}
+
+.hero-float {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 0.42rem;
+  color: var(--gb-1);
+  background: var(--gb-4);
+  border: 2px solid var(--gb-1);
+  padding: 0.35rem 0.4rem;
+  box-shadow: 2px 2px 0 var(--gb-1);
+  opacity: 0.85;
+}
+
+.hero-float-1 {
+  top: 34%;
+  left: 6%;
+  animation: float-bit 3s steps(4) infinite;
+}
+
+.hero-float-2 {
+  top: 42%;
+  right: 8%;
+  animation: float-bit 3.6s steps(4) infinite reverse;
+}
+
+.hero-float-3 {
+  bottom: 28%;
+  left: 42%;
+  animation: float-bit 2.8s steps(4) infinite;
+}
+
+.hero-grass {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 58%;
+  height: 16px;
+  transform: translateY(-100%);
+}
+
+.hero-grass .blade {
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 10px;
+  background: var(--gb-2);
+  box-shadow: 4px -4px 0 var(--gb-1);
+  animation: grass-sway 1.6s steps(2) infinite;
+}
+
+.hero-path {
+  position: absolute;
+  right: 12%;
+  bottom: 14%;
+  width: min(28vw, 180px);
+  height: 10px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--gb-3) 0 8px,
+      var(--gb-2) 8px 16px
+    );
+  border: 2px solid var(--gb-1);
+  opacity: 0.55;
+}
+
+.hero-stamp {
+  position: absolute;
+  top: 4.6rem;
+  left: var(--space);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-display);
+  font-size: 0.42rem;
+  color: var(--gb-1);
+  letter-spacing: 0.08em;
+  z-index: 1;
+}
+
+.stamp-led {
+  width: 8px;
+  height: 8px;
+  background: var(--gb-2);
+  box-shadow: 0 0 0 2px var(--gb-1);
+  animation: stamp-blink 1.2s steps(2) infinite;
+}
+
 .hero-left {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -233,11 +360,61 @@ p {
   box-shadow:
     4px 4px 0 var(--gb-1),
     inset 0 0 0 4px var(--gb-3);
-  padding: 2rem 1.85rem 1.85rem;
+  padding: 0 1.85rem 1.85rem;
+}
+
+.hero-window-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 -1.85rem 1.1rem;
+  padding: 0.55rem 1rem;
+  background: var(--gb-1);
+  border-bottom: 4px solid var(--gb-2);
+}
+
+.window-title {
+  font-family: var(--font-display);
+  font-size: 0.45rem;
+  color: var(--gb-4);
+  letter-spacing: 0.04em;
+}
+
+.window-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.window-dots i {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: var(--gb-3);
+}
+
+.window-dots i:nth-child(2) {
+  background: var(--gb-4);
+}
+
+.window-dots i:nth-child(3) {
+  background: var(--gb-2);
+}
+
+.hero-flavor {
+  font-family: var(--font-display);
+  font-size: 0.42rem;
+  line-height: 1.7;
+  color: var(--gb-2);
+  margin: -0.6rem 0 1.4rem;
+  padding: 0.55rem 0.65rem;
+  border: 2px dashed var(--gb-2);
+  background: color-mix(in srgb, var(--gb-3) 55%, var(--gb-4));
 }
 
 .hero-character {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -249,10 +426,27 @@ p {
   animation: pixel-in 0.5s var(--ease-steps) 0.25s both;
 }
 
+.hero-nameplate {
+  order: 2;
+  margin-top: 0.55rem;
+  font-family: var(--font-display);
+  font-size: 0.42rem;
+  color: var(--gb-4);
+  background: var(--gb-1);
+  border: 3px solid var(--gb-2);
+  box-shadow: 3px 3px 0 rgba(15, 56, 15, 0.45);
+  padding: 0.4rem 0.55rem;
+  letter-spacing: 0.04em;
+}
+
+.hero-character .pixel-character {
+  order: 1;
+}
+
 .speech-bubble {
   position: relative;
   z-index: 2;
-  max-width: 12rem;
+  max-width: 14rem;
   margin: 0 auto 0.85rem;
   background: var(--gb-4);
   border: 3px solid var(--gb-1);
@@ -264,14 +458,14 @@ p {
 .speech-bubble p,
 .speech-text {
   font-family: var(--font-display);
-  font-size: 0.48rem;
+  font-size: 0.45rem;
   line-height: 1.55;
   color: var(--gb-1);
   text-align: center;
   text-transform: none;
-  min-height: 1.55em;
-  min-width: 9.5rem;
-  white-space: nowrap;
+  min-height: 2.8em;
+  min-width: 11rem;
+  white-space: normal;
 }
 
 .speech-cursor {
@@ -756,6 +950,56 @@ p {
   }
 }
 
+@keyframes sun-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes cloud-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(28px);
+  }
+}
+
+@keyframes float-bit {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes grass-sway {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes stamp-blink {
+  0%,
+  49% {
+    background: var(--gb-2);
+  }
+  50%,
+  100% {
+    background: var(--gb-3);
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -777,12 +1021,28 @@ p {
     padding: 4.5rem var(--space) 1rem;
   }
 
+  .hero-sun {
+    right: 8%;
+    top: 10%;
+    width: 40px;
+  }
+
+  .hero-cloud-b,
+  .hero-float-3,
+  .hero-path {
+    display: none;
+  }
+
+  .hero-stamp {
+    top: 4.2rem;
+  }
+
   .speech-bubble {
-    max-width: 11rem;
+    max-width: 12rem;
   }
 
   .speech-bubble p {
-    font-size: 0.42rem;
+    font-size: 0.4rem;
   }
 
   .pixel-character {
@@ -855,6 +1115,11 @@ p {
   .pixel-character,
   .speech-bubble,
   .speech-cursor,
+  .hero-sun,
+  .hero-cloud,
+  .hero-float,
+  .blade,
+  .stamp-led,
   .reveal {
     animation: none !important;
     transition: none !important;
