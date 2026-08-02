@@ -52,6 +52,7 @@ export const education = [
     title: 'BSc Software Engineering',
     org: 'Asia Pacific University, Kuala Lumpur',
     body: 'Still leveling up in software engineering—data structures, architecture, databases, distributed systems, and friends. Right now I’m leading a team cloud-native app with Go, PostgreSQL, and React, with CI/CD and tests baked in from day one.',
+    icon: 'code',
   },
   {
     dateTime: '2024-01',
@@ -59,6 +60,7 @@ export const education = [
     title: 'Master of Business Administration',
     org: 'Swiss School of Business Research, Zürich (Distant) · Honors',
     body: 'Graduated with Honors after diving into process optimization, teamwork across disciplines, and decisions backed by data. It’s the people-and-priorities side of shipping platforms—and it pairs surprisingly well with DevOps.',
+    icon: 'brief',
   },
   {
     dateTime: '2019-01',
@@ -66,6 +68,7 @@ export const education = [
     title: 'HND Network Engineering',
     org: 'Pearson University, London (Distant) · Merit',
     body: 'Graduated with Merit after lots of hands-on labs: protocols, routing & switching, LAN/WAN design, security, and troubleshooting. Capstone was a campus network designed to stay reliable when things get busy.',
+    icon: 'network',
   },
 ]
 
