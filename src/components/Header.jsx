@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className={`site-header${scrolled ? ' scrolled' : ''}`}>
       <a className="logo" href="#top" onClick={closeMenu}>
-        ▼ Zayar Lin Maung
+        Zayar Lin Maung
       </a>
       <nav className={`nav${open ? ' open' : ''}`} aria-label="Primary">
         {navLinks.map((link) => (
